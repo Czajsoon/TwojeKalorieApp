@@ -7,9 +7,6 @@
 #include <QApplication>
 #include <QStandardPaths>
 #include <QDir>
-
-
-
 #include "users_functions.h"
 
 using namespace std;

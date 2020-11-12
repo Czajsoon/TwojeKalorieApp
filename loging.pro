@@ -13,14 +13,16 @@ SOURCES += \
     main.cpp \
     login.cpp \
     reading_users_functions.cpp \
-    users_functions.cpp
+    users_functions.cpp \
+    writing_functions.cpp
 
 HEADERS += \
     createaccount.h \
     login.h \
     reading_users_functions.h \
     struct_list_users.h \
-    users_functions.h
+    users_functions.h \
+    writing_functions.h
 
 FORMS += \
     createaccount.ui \

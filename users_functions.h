@@ -6,5 +6,7 @@
 void add(Users** head, std::string login, std::string password); //funkcja tworzaca i dodajaca uzytkownika do listy :)
 void delete_users_list(Users** head); //Funkcja usuwajaca liste uzytkownikow
 bool verify_account(Users** head, std::string login, std::string password); //funkcja sprawdzajaca podane dane logowania
+bool verify_login(Users **head,std::string login);
+int count_users(Users **head);
 
 #endif // USERS_FUNCTIONS_H

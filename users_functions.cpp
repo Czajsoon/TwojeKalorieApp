@@ -61,3 +61,29 @@ bool verify_account(Users **head,std::string login,std::string password) {
     else return false;
 }
 
+Users* find_node_users_login(Users **head, std::string login) {
+    Users* phead = *head;
+    while(phead){
+        if (phead->login == login) {
+            return phead;
+        }
+        phead = phead->pNext;
+    }
+    return NULL;
+}
+
+bool verify_login(Users **head,std::string login) {
+    if (find_node_users_login(head, login) != NULL) return true;
+    else return false;
+}
+
+int count_users(Users **head) {
+    int counter = 0;
+    Users* phead = *head;
+    while (phead!=NULL) {
+        counter++;
+        phead = phead->pNext;
+    }
+    return counter;
+}
+

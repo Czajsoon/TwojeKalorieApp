@@ -6,8 +6,6 @@
 
 #include <iostream>
 #include <string>
-
-
 #include <QFile>
 #include <QTextStream>
 #include <QMessageBox>
@@ -29,8 +27,7 @@ login::~login()
 void login::on_pushButton_2_clicked()
 {
     QApplication::quit();
-    //QFile file(QDir::currentPath() +"/gowno.txt" );
-
+   //QFile file(QDir::currentPath() +"/gowno.txt" );
    // if (file.open(QIODevice::WriteOnly)){
    //     QTextStream out(&file);
    //     QString login = ui->Login->text();
@@ -48,7 +45,7 @@ void login::on_pushButton_clicked()
     QString login = ui->Login->text();
     QString password =  ui->Password->text();
     if(verify_account(&users,login.toStdString(),password.toStdString())){
-            QMessageBox::information(this,"Super!!!","Udalo ci sie zalogować!!! GRATULACJE!!!");
+        QMessageBox::information(this,"Super!!!","Udalo ci sie zalogować!!! GRATULACJE!!!");
     }
     else{
         QMessageBox::warning(this,"Uwaga!!!","Niepoprawne dane!!!");
