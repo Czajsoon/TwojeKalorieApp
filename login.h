@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "createaccount.h"
+#include "kalkulator.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class login; }
 QT_END_NAMESPACE
@@ -25,5 +27,6 @@ private slots:
 private:
     Ui::login *ui;
     CreateAccount *createacc;
+    Kalkulator *calc;
 };
 #endif // LOGIN_H

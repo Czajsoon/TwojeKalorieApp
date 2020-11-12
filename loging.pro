@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     createaccount.cpp \
+    kalkulator.cpp \
     main.cpp \
     login.cpp \
     reading_users_functions.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 
 HEADERS += \
     createaccount.h \
+    kalkulator.h \
     login.h \
     reading_users_functions.h \
     struct_list_users.h \
@@ -26,6 +28,7 @@ HEADERS += \
 
 FORMS += \
     createaccount.ui \
+    kalkulator.ui \
     login.ui
 
 # Default rules for deployment.
