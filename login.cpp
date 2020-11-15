@@ -36,9 +36,9 @@ void login::on_pushButton_clicked()
     QString password =  ui->Password->text();
     if(verify_account(&users,login.toStdString(),password.toStdString())){
         QMessageBox::information(this,"Super!!!","Udalo ci sie zalogować!!! GRATULACJE!!!");
-        hide();
-        calc = new Kalkulator(this);
-        calc->show();
+       hide();
+       calc = new Kalkulator(this);
+       calc->show();
     }
     else{
         QMessageBox::warning(this,"Uwaga!!!","Niepoprawne dane!!!");
