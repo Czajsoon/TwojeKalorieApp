@@ -3,6 +3,7 @@
 #include "reading_users_functions.h"
 #include "users_functions.h"
 #include "struct_list_users.h"
+#include "globals.h"
 
 #include <iostream>
 #include <string>
@@ -35,7 +36,8 @@ void login::on_pushButton_clicked()
     QString login = ui->Login->text();
     QString password =  ui->Password->text();
     if(verify_account(&users,login.toStdString(),password.toStdString())){
-        QMessageBox::information(this,"Super!!!","Udalo ci sie zalogować!!! GRATULACJE!!!");
+       QMessageBox::information(this,"Super!!!","Udalo ci sie zalogować!!! GRATULACJE!!!");
+       login_user_name = ui->Login->text();
        hide();
        calc = new Kalkulator(this);
        calc->show();

@@ -23,6 +23,7 @@ private slots:
 
 private:
     Ui::Kalkulator *ui;
+
 };
 
 #endif // KALKULATOR_H

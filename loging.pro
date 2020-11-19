@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     createaccount.cpp \
+    globals.cpp \
     kalkulator.cpp \
     main.cpp \
     login.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 
 HEADERS += \
     createaccount.h \
+    globals.h \
     kalkulator.h \
     login.h \
     reading_users_functions.h \

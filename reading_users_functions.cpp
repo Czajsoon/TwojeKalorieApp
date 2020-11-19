@@ -7,9 +7,12 @@
 #include <QApplication>
 #include <QStandardPaths>
 #include <QDir>
+#include <QString>
 #include "users_functions.h"
 
 using namespace std;
+
+
 
 Users* adding_users_to_list() {
     Users* uzytkownicy = NULL;
