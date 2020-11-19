@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+
 namespace Ui {
 class Kalkulator;
 }
@@ -20,6 +21,8 @@ private slots:
     void on_ObliczBMI_clicked();
 
     void on_Wyjdz_clicked();
+
+    void on_LoggOut_clicked();
 
 private:
     Ui::Kalkulator *ui;

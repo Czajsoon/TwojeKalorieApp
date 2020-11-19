@@ -77,6 +77,18 @@ bool verify_login(Users **head,std::string login) {
     else return false;
 }
 
+bool check_password(Users **head,std::string login,std::string password) {
+    if (find_node_users_login(head, login) != NULL){
+        Users *user =  find_node_users_login(head, login);
+        if(user->password==password){
+            return true;
+        }
+        return false;
+    }
+    else return false;
+}
+
+
 int count_users(Users **head) {
     int counter = 0;
     Users* phead = *head;

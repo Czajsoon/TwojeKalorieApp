@@ -22,6 +22,7 @@ private slots:
 
 private:
     Ui::CreateAccount *ui;
+
 };
 
 #endif // CREATEACCOUNT_H
