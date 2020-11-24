@@ -135,3 +135,27 @@ void Kalkulator::on_LoggOut_clicked()
     QWidget *parent = this->parentWidget();
     parent->show();
 }
+
+void Kalkulator::on_AddCategory_clicked()
+{
+    addingcategorywin = new newCategoryWin(this);
+    addingcategorywin->show();
+}
+
+void Kalkulator::on_AddProduct_clicked()
+{
+    addingproductwin = new newproductwin(this);
+    addingproductwin->show();
+}
+
+void Kalkulator::on_DeleteCategory_clicked()
+{
+    deletinCatWin = new deleteCategorywin(this);
+    deletinCatWin->show();
+}
+
+void Kalkulator::on_DeleteProduct_clicked()
+{
+    deleteProdWin = new deleteProductWin(this);
+    deleteProdWin->show();
+}

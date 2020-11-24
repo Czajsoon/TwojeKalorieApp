@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>deleteProductWin</class>
+ <widget class="QDialog" name="deleteProductWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>430</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>450</width>
+    <height>430</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background-color: rgb(51, 51, 51);
+	color: rgb(220, 220, 220);
+font-size:15px;
+}
+QComboBox{
+	background-color: rgb(220, 220, 220);
+	color: rgb(51, 51, 51);
+margin-left:50%;
+margin-right:50%;
+padding-top:5px;
+padding-bottom:5px;
+}
+
+QPushButton{
+margin-left:50%;
+margin-right:50%;
+padding-top:5px;
+padding-bottom:5px;
+margin-bottom:8px;
+	color: rgb(51, 51, 51);
+border-radius:5px;
+}
+
+QPushButton#aktualizuj{
+	background-color: rgb(255, 193, 6);
+
+}
+
+QPushButton#usun{
+	background-color: rgb(255, 193, 6);
+}
+
+QPushButton#anuluj{
+	background-color: rgb(255, 55, 15);
+}
+
+QPushButton#aktualizuj:hover{
+	
+	background-color: rgb(255, 234, 0);
+
+}
+
+QPushButton#usun:hover{
+	background-color: rgb(255, 234, 0);
+}
+
+QPushButton#anuluj:hover{
+	background-color: rgb(255, 74, 14);
+}
+
+QLabel#errorCat{
+	color: rgb(255, 55, 15);
+}
+
+QLabel#errorPro{
+	color: rgb(255, 55, 15);
+}
+
+QLabel#succes{
+	color: rgb(7, 255, 15);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="infoCat">
+     <property name="text">
+      <string>Wybierz kategorie</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="Category">
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="errorCat">
+     <property name="text">
+      <string>ErrorCat</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="aktualizuj">
+     <property name="text">
+      <string>Akualizuj</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="infoPro">
+     <property name="text">
+      <string>Wybierz produkt</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="Product">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="errorPro">
+     <property name="text">
+      <string>ErrorProduct</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="succes">
+     <property name="text">
+      <string>Succes</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="usun">
+     <property name="text">
+      <string>Usuń</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="anuluj">
+     <property name="text">
+      <string>Anuluj</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>newproductwin</class>
+ <widget class="QDialog" name="newproductwin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>560</width>
+    <height>560</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>560</width>
+    <height>560</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+
+	background-color: rgb(51, 51, 51);
+font-size:15px;
+	color: rgb(220, 220, 220);
+}
+
+QLabel#errorNP{
+	color: rgb(255, 55, 15);
+}
+
+QLabel#errorWE{
+	color: rgb(255, 55, 15);
+}
+
+QLabel#succes{
+	color: rgb(7, 255, 15);
+}
+
+QPushButton{
+margin-bottom:12px;
+	color: rgb(51, 51, 51);
+padding-top:10px;
+padding-bottom:10px;
+margin-left:50%;
+margin-right:50%;
+border-radius:5px;
+}
+
+QPushButton#dodaj{
+	background-color: rgb(7, 255, 15);
+}
+
+QPushButton#zakoncz{
+	background-color: rgb(255, 55, 15);
+}
+
+QPushButton#dodaj:hover{
+	
+	background-color: rgb(169, 253, 106);
+}
+
+QPushButton#zakoncz:hover{
+	
+	background-color: rgb(255, 105, 30);
+}
+
+QLineEdit{
+	background-color: rgb(220, 220, 220);
+margin-left:50%;
+margin-right:50%;
+padding-top:10px;
+padding-bottom:10px;
+border-radius:5px;
+	color: rgb(51, 51, 51);
+}
+
+QLineEdit:hover{
+	background-color: rgb(245, 245, 245);
+}
+
+QLineEdit:focus{
+background-color: rgb(245, 245, 245);
+}
+
+QComboBox{
+	background-color: rgb(220, 220, 220);
+padding-top:5px;
+padding-bottom:5px;
+	color: rgb(51, 51, 51);
+border-radius:5px;
+}
+
+QComboBox:hover{
+background-color: rgb(245, 245, 245);
+}
+QComboBox:focus{
+background-color: rgb(245, 245, 245);
+}
+
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="info1">
+     <property name="text">
+      <string>Wybierz kategorie produktu</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="info2">
+     <property name="text">
+      <string>Wpisz nazwe nowego produktu </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="NP">
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="errorNP">
+     <property name="text">
+      <string>BłądNazwaProduktu</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="info3">
+     <property name="text">
+      <string>Wpisz wartość energetyczną podanego produktu</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="WE">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="errorWE">
+     <property name="text">
+      <string>BłądWartośćEnergetyczna</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="succes">
+     <property name="text">
+      <string>Succes!</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="dodaj">
+     <property name="text">
+      <string>Dodaj</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="zakoncz">
+     <property name="text">
+      <string>Zakończ dodawanie</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

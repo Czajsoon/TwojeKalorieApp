@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>newCategoryWin</class>
+ <widget class="QDialog" name="newCategoryWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dodawanie nowej kategorii produktów</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	border-radius:5px;
+	background-color: rgb(51, 51, 51);
+	margin-right:50%;
+	margin-left:50%;
+	font-size:15px;
+	color: rgb(220, 220, 220);
+}
+
+QLineEdit{
+	background-color: rgb(220, 220, 220);
+padding-top:10px;
+padding-bottom:10px;
+	color: rgb(51, 51, 51);
+}
+
+QLineEdit:hover{
+	background-color: rgb(248, 248, 248);
+}
+
+QLineEdit:focus{
+	background-color: rgb(248, 248, 248);
+}
+
+QLabel#bladKategorii{
+margin-top:10px;
+margin-right:0;
+	margin-left:0;
+	color: rgb(255, 55, 15);
+}
+
+QLabel#info{
+margin-bottom:10px;
+}
+QPushButton{
+font-size:20px;
+	color: rgb(51, 51, 51);
+padding-top:10px;
+padding-bottom:10px;
+}
+
+QPushButton#dodaj{
+	background-color: rgb(7, 255, 15);
+}
+
+QPushButton#dodaj:hover{
+	background-color: rgb(169, 253, 106);
+}
+
+QPushButton#anuluj{
+	background-color: rgb(255, 55, 15);
+}
+
+QPushButton#anuluj:hover{
+	background-color: rgb(255, 107, 21);
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item alignment="Qt::AlignBottom">
+    <widget class="QLabel" name="info">
+     <property name="text">
+      <string>Wpisz nazwę nowej kategorii produktów</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="categoryname">
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignTop">
+    <widget class="QLabel" name="bladKategorii">
+     <property name="text">
+      <string>BłądKategorii</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignTop">
+    <widget class="QPushButton" name="dodaj">
+     <property name="text">
+      <string>Dodaj</string>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignTop">
+    <widget class="QPushButton" name="anuluj">
+     <property name="text">
+      <string>Zakończ dodawanie</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

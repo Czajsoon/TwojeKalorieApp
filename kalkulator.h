@@ -2,7 +2,10 @@
 #define KALKULATOR_H
 
 #include <QMainWindow>
-
+#include "newcategorywin.h"
+#include "newproductwin.h"
+#include "deletecategorywin.h"
+#include "deleteproductwin.h"
 
 namespace Ui {
 class Kalkulator;
@@ -24,9 +27,20 @@ private slots:
 
     void on_LoggOut_clicked();
 
+    void on_AddCategory_clicked();
+
+    void on_AddProduct_clicked();
+
+    void on_DeleteCategory_clicked();
+
+    void on_DeleteProduct_clicked();
+
 private:
     Ui::Kalkulator *ui;
-
+    newCategoryWin* addingcategorywin;
+    newproductwin* addingproductwin;
+    deleteCategorywin* deletinCatWin;
+    deleteProductWin* deleteProdWin;
 };
 
 #endif // KALKULATOR_H

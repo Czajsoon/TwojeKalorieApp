@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddingCategoryDialog</class>
+ <widget class="QDialog" name="AddingCategoryDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>412</width>
+    <height>365</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dodawnie nowej kategorii</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background-color: rgb(51, 51, 51);
+	color: rgb(51, 51, 51);
+font-size:17px;
+}
+
+QLabel{
+	color: rgb(220, 220, 220);
+margin-bottom:20px;
+padding-top:20px;
+}
+
+QLabel#BladNazwyKategorii{
+	
+	color: rgb(255, 0, 0);
+}
+
+QLineEdit{
+margin-right:50%;
+margin-left:50%;
+padding-top:15px;
+padding-bottom:15px;
+	background-color: rgb(220, 220, 220);
+}
+
+QLineEdit:hover{
+	background-color: rgb(249, 249, 249);
+}
+
+QLineEdit:focus{
+	background-color: rgb(249, 249, 249);
+}
+
+QPushButton{
+	margin-right:50%;
+margin-left:50%;
+padding-top:15px;
+padding-bottom:15px;
+
+}
+
+QPushButton#Add{
+	margin-bottom:20px;
+	background-color: rgb(7, 255, 15);
+}
+
+QPushButton#cancel{
+margin-bottom:20px;
+	background-color: rgb(255, 55, 15);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item alignment="Qt::AlignBottom">
+    <widget class="QLabel" name="textInfo">
+     <property name="text">
+      <string>Wpisz nazwę nowej kategorii</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignTop">
+    <widget class="QLabel" name="BladNazwyKategorii">
+     <property name="text">
+      <string>BładNazwyKategorii</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignTop">
+    <widget class="QPushButton" name="Add">
+     <property name="text">
+      <string>Dodaj</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="cancel">
+     <property name="text">
+      <string>Anuluj</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

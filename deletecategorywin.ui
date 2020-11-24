@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>deleteCategorywin</class>
+ <widget class="QDialog" name="deleteCategorywin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>330</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>620</width>
+    <height>330</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>620</width>
+    <height>330</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background-color: rgb(51, 51, 51);
+font-size:17px;
+	color: rgb(220, 220, 220);
+}
+
+QLabel{
+	color: rgb(220, 220, 220);
+}
+
+QLabel#warning{
+	
+	color: rgb(255, 55, 15);
+}
+
+
+QLabel#ErrorCat{
+	
+	color: rgb(7, 255, 15);
+}
+
+QComboBox{
+padding-top:5px;
+padding-bottom:5px;
+margin-left:50%;
+margin-right:50%;
+	background-color: rgb(220, 220, 220);
+	color: rgb(51, 51, 51);
+border-radius:5px;
+}
+
+QPushButton{
+margin-left:50%;
+margin-right:50%;
+padding-top:5px;
+padding-bottom:5px;
+margin-bottom:10px;
+border-radius:5px;
+	color: rgb(51, 51, 51);
+}
+
+QPushButton#usun{
+	
+	background-color: rgb(255, 193, 6);
+}
+
+QPushButton#anuluj{
+	
+	background-color: rgb(255, 55, 15);
+}
+
+QPushButton#usun:hover{
+	
+	background-color: rgb(255, 255, 6);
+}
+
+QPushButton#anuluj:hover{
+	background-color: rgb(255, 90, 7);
+}
+
+QMessageBox{
+	color: rgb(220, 220, 220);
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="warning">
+     <property name="text">
+      <string>Jeśli usuniesz kategorie to wszytkie produkty z tej kategorii zostana usuniete!!!</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="infoCat">
+     <property name="text">
+      <string>Wybierz Kategorie</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="category">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="ErrorCat">
+     <property name="text">
+      <string>ErrorCat</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="usun">
+     <property name="text">
+      <string>Usuń</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="anuluj">
+     <property name="text">
+      <string>Anuluj</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
