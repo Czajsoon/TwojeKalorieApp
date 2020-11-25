@@ -47,6 +47,15 @@ void deleteCategorywin::on_usun_clicked()
     QString nazwaCat = ui->category->currentText();
     deleteCategory(&nowalistaKategorii,nazwaCat.toStdString());
     save_CategoriesAndProducts(&nowalistaKategorii);
-    QMessageBox::information(this,"Usuwanie kategorii","Usuwanie kategorii o nazwie " + nazwaCat +" powiodło się!");
-    this->close();
+    ui->ErrorCat->setText("Usuwanie kategorii o nazwie " + nazwaCat +" powiodło się!");
+    ui->category->clear();
+    listaKategorii = addingCategoriesAndProduct();
+    categoriesProduct* phead = listaKategorii;
+    while(phead){
+        std::string nazwaCat = phead->nazwa_kategorii;
+        QString qnazwaCat = QString::fromStdString(nazwaCat);
+        ui->category->addItem(qnazwaCat);
+        phead = phead->pNext;
+    }
+//    this->close();
 }

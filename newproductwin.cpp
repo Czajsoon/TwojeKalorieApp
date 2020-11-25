@@ -75,7 +75,7 @@ void newproductwin::on_dodaj_clicked()
             }
             else{
                 addProductToCategory(&listaKategorii,ui->comboBox->currentText().toStdString(),ui->NP->text().toStdString(),ui->WE->text().toDouble());
-                ui->succes->setText("Udało się dodać produkt!\n o nazwie: " + ui->NP->text() + "\n o wartości energetycznej: " + ui->WE->text());
+                ui->succes->setText("Udało się dodać produkt!\n o nazwie: " + ui->NP->text() + "\n o wartości energetycznej: " + ui->WE->text() +" kcal");
                 save_CategoriesAndProducts(&listaKategorii);
                 ui->NP->setText("");
                 ui->WE->setText("");
