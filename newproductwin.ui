@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Dodawanie Produktu</string>
   </property>
   <property name="styleSheet">
    <string notr="true">*{
@@ -97,6 +97,8 @@ padding-top:5px;
 padding-bottom:5px;
 	color: rgb(51, 51, 51);
 border-radius:5px;
+margin-left:50%;
+margin-right:50%;
 }
 
 QComboBox:hover{
@@ -174,7 +176,7 @@ background-color: rgb(245, 245, 245);
    <item>
     <widget class="QLabel" name="info3">
      <property name="text">
-      <string>Wpisz wartość energetyczną podanego produktu</string>
+      <string>Wpisz wartość energetyczną podanego produktu w wadze 1g</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

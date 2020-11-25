@@ -5,19 +5,23 @@
 #include "produktyStruktury.h"
 #include "funkceProduktow.h"
 
+#include <QDir>
+
 using namespace std;
 
 void saveProducts(categoriesProduct** head) {
     categoriesProduct* phead = *head;
+    string path = QDir::currentPath().toStdString();
     string text = ".txt";
     string category_name;
     while (phead) {
-        string folder = "Produkty/Produkty/";
+        string folder = "/Produkty/Produkty/";
+        path.append(folder);
         category_name = phead->nazwa_kategorii;
         product* produkty = phead->produkty;
-        folder.append(category_name);
-        folder.append(text);
-        ofstream fileProducts(folder);
+        path.append(category_name);
+        path.append(text);
+        ofstream fileProducts(path);
         if (fileProducts.is_open()) {
             while (produkty) {
                 fileProducts << produkty->nazwa_kategorii <<" "<< produkty->nazwa_produktu << " " << produkty->wartosc_energetyczna << endl;
@@ -29,7 +33,9 @@ void saveProducts(categoriesProduct** head) {
 }
 
 void save_CategoriesAndProducts(categoriesProduct** head) {
-    ofstream fileCategories("Produkty/CategoriesProducts.txt");
+    string path = QDir::currentPath().toStdString();
+    path.append("/Produkty/CategoriesProducts.txt");
+    ofstream fileCategories(path);
     if (fileCategories.is_open()) {
         string nazwa_kategorii;
         categoriesProduct* phead = *head;
