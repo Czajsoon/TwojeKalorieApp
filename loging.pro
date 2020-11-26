@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addingnewmeal.cpp \
     createaccount.cpp \
     deletecategorywin.cpp \
     deleteproductwin.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     kalkulator.cpp \
     main.cpp \
     login.cpp \
+    mealFunctions.cpp \
     newcategorywin.cpp \
     newproductwin.cpp \
     readingCategoriesAndProducts.cpp \
@@ -27,6 +29,7 @@ SOURCES += \
     writing_functions.cpp
 
 HEADERS += \
+    addingnewmeal.h \
     createaccount.h \
     deletecategorywin.h \
     deleteproductwin.h \
@@ -35,6 +38,7 @@ HEADERS += \
     globals.h \
     kalkulator.h \
     login.h \
+    mealStructure.h \
     newcategorywin.h \
     newproductwin.h \
     produktyStruktury.h \
@@ -46,6 +50,7 @@ HEADERS += \
     writing_functions.h
 
 FORMS += \
+    addingnewmeal.ui \
     createaccount.ui \
     deletecategorywin.ui \
     deleteproductwin.ui \

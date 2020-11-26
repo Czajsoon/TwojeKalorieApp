@@ -157,6 +157,10 @@ QPushButton#AddProduct:hover{
 	
 	background-color: rgb(157, 253, 150);
 	
+}
+
+QPushButton#dodajPosilek{
+	background-color: rgb(85, 85, 255);
 }</string>
    </property>
    <widget class="QWidget" name="gridLayoutWidget">
@@ -385,6 +389,19 @@ QPushButton#AddProduct:hover{
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="dodajPosilek">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>190</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dodaj posiłek</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

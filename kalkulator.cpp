@@ -159,3 +159,9 @@ void Kalkulator::on_DeleteProduct_clicked()
     deleteProdWin = new deleteProductWin(this);
     deleteProdWin->show();
 }
+
+void Kalkulator::on_dodajPosilek_clicked()
+{
+    addingnewmealwin = new addingNewMeal(this);
+    addingnewmealwin->show();
+}
