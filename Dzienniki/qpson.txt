@@ -1,0 +1,22 @@
+--- Nazwa Posilku ---
+2020-11-28  22:00:03
+--- Data ---
+2020-11-28
+--- Produkty ---
+Kurczak 12 123
+--- Wartosc Energetyczna Posilku ---
+1476
+--- Waga posilku ---
+123
+
+--- Nazwa Posilku ---
+2020-11-28  22:00:08
+--- Data ---
+2020-11-28
+--- Produkty ---
+Kurczak 12 12
+--- Wartosc Energetyczna Posilku ---
+144
+--- Waga posilku ---
+12
+

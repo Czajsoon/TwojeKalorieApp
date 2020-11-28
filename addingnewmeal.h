@@ -2,6 +2,7 @@
 #define ADDINGNEWMEAL_H
 
 #include <QDialog>
+#include "mealStructure.h"
 
 namespace Ui {
 class addingNewMeal;
@@ -22,11 +23,15 @@ private slots:
 
     void on_Zatwierdz_clicked();
 
+    void on_saveDanie_clicked();
+
 private:
     Ui::addingNewMeal *ui;
+    posilek* nowyPosilek = new posilek;
+    productMeal* listaProduktow = NULL;
 
     enum koumny{
-        KATEGORIA , PRODUKT ,WAGA
+        PRODUKT ,WAGA
     };
 };
 

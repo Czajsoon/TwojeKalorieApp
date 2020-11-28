@@ -260,3 +260,18 @@ int count_products(categoriesProduct* head,std::string nazwa_kategorii){
     }
     return counter;
 }
+
+product* current_product(categoriesProduct* head,std::string nazwa_kategorii,std::string nazwa_produktu){
+    while(head){
+        if(head->nazwa_kategorii == nazwa_kategorii){
+            product* listaProduktow = head->produkty;
+            while(listaProduktow){
+                if(listaProduktow->nazwa_produktu==nazwa_produktu)
+                    return listaProduktow;
+                listaProduktow = listaProduktow->pNext;
+            }
+        }
+        head = head->pNext;
+    }
+    return NULL;
+}

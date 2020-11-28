@@ -2,49 +2,39 @@
 
 #include "mealStructure.h"
 
-void createListMeals(posilek** head, std::string nazwa_posilku) {
+void createListMeals(posilek** head, posilek* nowyPosilek) {
     if (!*head) {
-        posilek* phead = new posilek;
-        phead->pNext = nullptr;
-        phead->nazwa_posilku = nazwa_posilku;
-        phead->wartosc_energetyczna = 0;
-        phead->produkty = nullptr;
-        *head = phead;
+        *head = nowyPosilek;
     }
 }
 
-void addToListMeals(posilek** head, std::string nazwa_posilku) {
+void addToListMeals(posilek** head, posilek* nowyPosilek) {
     posilek* phead = *head;
-    posilek* newElement = new posilek;
-    newElement->nazwa_posilku = nazwa_posilku;
-    newElement->wartosc_energetyczna = 0;
-    newElement->pNext = nullptr;
-    newElement->produkty = nullptr;
-    if (newElement->nazwa_posilku <= phead->nazwa_posilku) {
-        *head = newElement;
-        newElement->pNext = phead;
+    if (nowyPosilek->nazwa_posilku <= phead->nazwa_posilku) {
+        *head = nowyPosilek;
+        nowyPosilek->pNext = phead;
     }
     else {
         while (phead->pNext != NULL) {
             posilek* pheadnext = phead->pNext;
-            if (newElement->nazwa_posilku <= pheadnext->nazwa_posilku) {
-                phead->pNext = newElement;
-                newElement->pNext = pheadnext;
+            if (nowyPosilek->nazwa_posilku <= pheadnext->nazwa_posilku) {
+                phead->pNext = nowyPosilek;
+                nowyPosilek->pNext = pheadnext;
                 break;
             }
             phead = phead->pNext;
         }
-        if (newElement->nazwa_posilku >= phead->nazwa_posilku) {
-            phead->pNext = newElement;
+        if (nowyPosilek->nazwa_posilku >= phead->nazwa_posilku) {
+            phead->pNext = nowyPosilek;
         }
     }
 }
 
-void addMeal(posilek** head, std::string nazwa_posilku) {
+void addMeal(posilek** head, posilek* nowyPosilek) {
     if (*head)
-        addToListMeals(head, nazwa_posilku);
+        addToListMeals(head, nowyPosilek);
     else
-        createListMeals(head, nazwa_posilku);
+        createListMeals(head, nowyPosilek);
 }
 
 void createListProducts(productMeal** head, std::string nazwa_produktu, float wartosc_energetyczna, double waga_produktu) {
@@ -65,27 +55,11 @@ void addToListProducts(productMeal** head, std::string nazwa_produktu, float war
     newElement->waga = waga_produktu;
     newElement->pNext = nullptr;
     newElement->wartosc_energetyczna = wartosc_energetyczna;
-    if (newElement->nazwa_produktu <= phead->nazwa_produktu) {
-        *head = newElement;
-        newElement->pNext = phead;
-    }
-    else {
-        while (phead->pNext != NULL) {
-            productMeal* pheadnext = phead->pNext;
-            if (newElement->nazwa_produktu <= pheadnext->nazwa_produktu) {
-                phead->pNext = newElement;
-                newElement->pNext = pheadnext;
-                break;
-            }
-            phead = phead->pNext;
-        }
-        if (newElement->nazwa_produktu >= phead->nazwa_produktu) {
-            phead->pNext = newElement;
-        }
-    }
+    *head = newElement;
+    newElement->pNext = phead;
 }
 
-void addProductToMeal(posilek** headCategory, std::string nazwa_posilku, std::string nazwa_produktu, float wartosc_energetyczna,double waga_produktu) {
+void addProductToMeal(posilek** headCategory, std::string nazwa_posilku, std::string nazwa_produktu, float wartosc_energetyczna, double waga_produktu) {
     posilek* pheadCat = *headCategory;
     while (pheadCat != NULL) {
         if (pheadCat->nazwa_posilku == nazwa_posilku) {
@@ -103,4 +77,43 @@ void addProductToMeal(posilek** headCategory, std::string nazwa_posilku, std::st
         pheadCat = pheadCat->pNext;
     }
     std::cout << "nie dodano produktu do kategorii brak kategorii" << std::endl;
+}
+
+void addProductToMealNewProducts(posilek** headCategory, std::string nazwa_produktu, float wartosc_energetyczna, double waga_produktu) {
+    posilek* pheadCat = *headCategory;
+    while (pheadCat != NULL) {
+        if (pheadCat->produkty){
+            addToListProducts(&pheadCat->produkty, nazwa_produktu, wartosc_energetyczna, waga_produktu);
+            pheadCat->wartosc_energetyczna += (wartosc_energetyczna*waga_produktu);
+            *headCategory = pheadCat;
+            return;
+        }
+        else {
+            createListProducts(&pheadCat->produkty, nazwa_produktu, wartosc_energetyczna, waga_produktu);
+            pheadCat->wartosc_energetyczna += (wartosc_energetyczna*waga_produktu);
+            *headCategory = pheadCat;
+            return;
+        }
+    }
+    std::cout << "nie dodano produktu do kategorii brak kategorii" << std::endl;
+}
+
+void delete_all_meals(posilek** headCategory) {
+    posilek* current = *headCategory;
+    posilek* next;
+    while (current != NULL)
+    {
+        next = current->pNext;
+        productMeal* currentProduct = current->produkty;
+        productMeal* nextProduct;
+        while (currentProduct != NULL) {
+            nextProduct = currentProduct->pNext;
+            free(currentProduct);
+            currentProduct = nextProduct;
+        }
+        current->produkty = NULL;
+        free(current);
+        current = next;
+    }
+    *headCategory = NULL;
 }

@@ -16,5 +16,6 @@ bool is_product_in_categories(categoriesProduct* head, std::string nazwa_kategor
 void deleteProduct(categoriesProduct** head, std::string nazwa_kategorii, std::string nazwa_produktu);
 void deleteCategory(categoriesProduct** head, std::string nazwa_kategorii);
 int count_products(categoriesProduct* head,std::string nazwa_kategorii);
+product* current_product(categoriesProduct* head,std::string nazwa_kategorii,std::string nazwa_produktu);
 
 #endif // !FUNKCJEPRODUKTOW_H_

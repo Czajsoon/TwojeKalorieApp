@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     login.cpp \
     mealFunctions.cpp \
+    mealReadWriteFunctions.cpp \
     newcategorywin.cpp \
     newproductwin.cpp \
     readingCategoriesAndProducts.cpp \
@@ -38,6 +39,8 @@ HEADERS += \
     globals.h \
     kalkulator.h \
     login.h \
+    mealFunctions.h \
+    mealReadWriteFunctions.h \
     mealStructure.h \
     newcategorywin.h \
     newproductwin.h \

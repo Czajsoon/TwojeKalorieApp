@@ -17,8 +17,10 @@ struct productMeal {
 
 struct posilek {
     string nazwa_posilku;
+    string data;
     productMeal* produkty;
     float wartosc_energetyczna;
+    double waga;
     posilek* pNext;
 };
 #endif // MEALSTRUCTURE_H
