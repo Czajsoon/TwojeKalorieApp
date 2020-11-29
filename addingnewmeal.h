@@ -25,10 +25,17 @@ private slots:
 
     void on_saveDanie_clicked();
 
+    void on_DEleteListProducts_clicked();
+
+    void on_BackListProducts_clicked();
+
+    void on_Share_clicked();
+
 private:
     Ui::addingNewMeal *ui;
     posilek* nowyPosilek = new posilek;
     productMeal* listaProduktow = NULL;
+    productMeal* wczesniejszyProdukt = NULL;
 
     enum koumny{
         PRODUKT ,WAGA

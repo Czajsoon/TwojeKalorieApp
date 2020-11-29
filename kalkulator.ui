@@ -161,6 +161,8 @@ QPushButton#AddProduct:hover{
 
 QPushButton#dodajPosilek{
 	background-color: rgb(85, 85, 255);
+color: rgb(51, 51, 51);
+font-size:17px;
 }</string>
    </property>
    <widget class="QWidget" name="gridLayoutWidget">
@@ -393,8 +395,8 @@ QPushButton#dodajPosilek{
    <widget class="QPushButton" name="dodajPosilek">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>190</y>
+      <x>460</x>
+      <y>240</y>
       <width>251</width>
       <height>51</height>
      </rect>

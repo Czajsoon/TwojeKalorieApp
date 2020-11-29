@@ -41,7 +41,9 @@ void newCategoryWin::on_dodaj_clicked()
         else{
             categoriesProduct* listaKategorii = NULL;
             listaKategorii = addingCategoriesAndProduct();
-            if(is_category_in_Categories(listaKategorii,ui->categoryname->text().toStdString())){
+            QString nCat =  ui->categoryname->text();
+            nCat[0] = nCat[0].toUpper();
+            if(is_category_in_Categories(listaKategorii,nCat.toStdString())){
                 ui->bladKategorii->setText("Taka kategoria istnieje!");
             }
             else{

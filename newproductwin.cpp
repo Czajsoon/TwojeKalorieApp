@@ -61,13 +61,15 @@ void newproductwin::on_dodaj_clicked()
              ui->errorWE->setText("Wprowadzono niedozwolony znak - spacja");
         }
         else{
+            QString ProName = ui->NP->text();
+            ProName[0] = ProName[0].toUpper();
             categoriesProduct* listaKategorii = NULL;
             listaKategorii = addingCategoriesAndProduct();
-            if(is_product_in_categories(listaKategorii,ui->comboBox->currentText().toStdString(),ui->NP->text().toStdString()) && !numbers_in_string(ui->WE->text().toStdString())){
+            if(is_product_in_categories(listaKategorii,ui->comboBox->currentText().toStdString(),ProName.toStdString()) && !numbers_in_string(ui->WE->text().toStdString())){
                 ui->errorWE->setText("Proszę wprowadzić tylko liczby (np. 20.5)");
                 ui->errorNP->setText("Istnieje taki produkt w tej kategorii!");
             }
-            else if(is_product_in_categories(listaKategorii,ui->comboBox->currentText().toStdString(),ui->NP->text().toStdString())){
+            else if(is_product_in_categories(listaKategorii,ui->comboBox->currentText().toStdString(),ProName.toStdString())){
                 ui->errorNP->setText("Istnieje taki produkt w tej kategorii!");
             }
             else if(!numbers_in_string(ui->WE->text().toStdString())){
