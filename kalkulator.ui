@@ -163,6 +163,18 @@ QPushButton#dodajPosilek{
 	background-color: rgb(85, 85, 255);
 color: rgb(51, 51, 51);
 font-size:17px;
+}
+
+QPushButton#MojDziennik{
+	background-color: rgb(85, 85, 255);
+color: rgb(51, 51, 51);
+font-size:17px;
+}
+
+QPushButton#Ideas{
+	background-color: rgb(85, 85, 255);
+color: rgb(51, 51, 51);
+font-size:17px;
 }</string>
    </property>
    <widget class="QWidget" name="gridLayoutWidget">
@@ -403,6 +415,32 @@ font-size:17px;
     </property>
     <property name="text">
      <string>Dodaj posiłek</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="MojDziennik">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>240</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mój Dziennik</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Ideas">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>150</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pomysły na przepisy</string>
     </property>
    </widget>
   </widget>

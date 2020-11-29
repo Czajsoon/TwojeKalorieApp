@@ -350,3 +350,10 @@ void addingNewMeal::on_Share_clicked()
         ui->produkty->setRowCount(0);
     }
 }
+
+void addingNewMeal::on_wyjdz_clicked()
+{
+    this->close();
+    QWidget *parent = this->parentWidget();
+    parent->show();
+}

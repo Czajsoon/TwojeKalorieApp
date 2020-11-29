@@ -1,0 +1,12 @@
+--- Nazwa Posilku ---
+gh
+--- Data ---
+2020-11-29
+--- Produkty ---
+Kurczak 12 35
+Wołowina 122 23
+--- Wartosc Energetyczna Posilku ---
+3226
+--- Waga posilku ---
+58
+

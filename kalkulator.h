@@ -7,6 +7,7 @@
 #include "deletecategorywin.h"
 #include "deleteproductwin.h"
 #include "addingnewmeal.h"
+#include "mojdzienik.h"
 
 namespace Ui {
 class Kalkulator;
@@ -38,6 +39,8 @@ private slots:
 
     void on_dodajPosilek_clicked();
 
+    void on_MojDziennik_clicked();
+
 private:
     Ui::Kalkulator *ui;
     newCategoryWin* addingcategorywin;
@@ -45,6 +48,7 @@ private:
     deleteCategorywin* deletinCatWin;
     deleteProductWin* deleteProdWin;
     addingNewMeal* addingnewmealwin;
+    MojDzienik* mojDziennikWin;
 };
 
 #endif // KALKULATOR_H

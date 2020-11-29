@@ -21,6 +21,7 @@ SOURCES += \
     login.cpp \
     mealFunctions.cpp \
     mealReadWriteFunctions.cpp \
+    mojdzienik.cpp \
     newcategorywin.cpp \
     newproductwin.cpp \
     readingCategoriesAndProducts.cpp \
@@ -42,6 +43,7 @@ HEADERS += \
     mealFunctions.h \
     mealReadWriteFunctions.h \
     mealStructure.h \
+    mojdzienik.h \
     newcategorywin.h \
     newproductwin.h \
     produktyStruktury.h \
@@ -59,6 +61,7 @@ FORMS += \
     deleteproductwin.ui \
     kalkulator.ui \
     login.ui \
+    mojdzienik.ui \
     newcategorywin.ui \
     newproductwin.ui
 

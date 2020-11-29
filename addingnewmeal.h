@@ -31,6 +31,8 @@ private slots:
 
     void on_Share_clicked();
 
+    void on_wyjdz_clicked();
+
 private:
     Ui::addingNewMeal *ui;
     posilek* nowyPosilek = new posilek;

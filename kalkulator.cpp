@@ -162,6 +162,13 @@ void Kalkulator::on_DeleteProduct_clicked()
 
 void Kalkulator::on_dodajPosilek_clicked()
 {
+    this->hide();
     addingnewmealwin = new addingNewMeal(this);
     addingnewmealwin->show();
+}
+
+void Kalkulator::on_MojDziennik_clicked()
+{
+    mojDziennikWin = new MojDzienik(this);
+    mojDziennikWin->show();
 }

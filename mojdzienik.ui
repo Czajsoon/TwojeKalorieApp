@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MojDzienik</class>
+ <widget class="QDialog" name="MojDzienik">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>902</width>
+    <height>455</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background-color: rgb(51, 51, 51);
+font-size:20px;
+}</string>
+  </property>
+  <widget class="QLabel" name="dziennikInfo">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>20</y>
+     <width>231</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dziennik USER_NAME</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tabela">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>881</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QHeaderView::section {
+    background-color: #646464;
+    padding: 14px;
+    border: 1px solid #fffff8;
+    font-size: 14pt;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="szowProducts">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>390</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Wyswietl produkty </string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="numerPosilku">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>390</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>999999999</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>390</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Wybierz numer dania</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="usunPosilek">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>390</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Usuń Posiłek</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
