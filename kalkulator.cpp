@@ -169,6 +169,7 @@ void Kalkulator::on_dodajPosilek_clicked()
 
 void Kalkulator::on_MojDziennik_clicked()
 {
+    this->hide();
     mojDziennikWin = new MojDzienik(this);
     mojDziennikWin->show();
 }

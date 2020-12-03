@@ -13,6 +13,7 @@
 #include <QDir>
 #include <QWidget>
 
+
 login::login(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::login)
@@ -20,6 +21,9 @@ login::login(QWidget *parent)
     ui->setupUi(this);
     ui->ErrorLogin->setText("");
     ui->ErrorPassword->setText("");
+    setWindowIcon(QIcon(QDir::currentPath() + "/images/TK.png"));
+
+            //styleSheet("background-color:red;");
 }
 
 login::~login()

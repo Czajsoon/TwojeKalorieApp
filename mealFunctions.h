@@ -14,4 +14,7 @@ void createAddProductMealListHistory(productMeal** head,std::string nazwa_produk
 void cofnijHistorie(productMeal** head);
 void usunHistorie(productMeal** head);
 void deleteProduct0gram(posilek** head);
+int policzPosilkiwDzienniku(posilek** headPosilek);
+posilek* produktyPosilkuODanymNumerze(posilek* headPosilek,int numer);
+void deleteMealFromList(posilek** head, int numer_posilku);
 #endif // MEALFUNCTIONS_H

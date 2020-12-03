@@ -270,3 +270,52 @@ void deleteProduct0gram(posilek** head){
     prev->pNext = pPro->pNext;
     delete pPro;
 }
+
+
+int policzPosilkiwDzienniku(posilek** headPosilek){
+    posilek* phead = *headPosilek;
+    int counter = 0;
+    while(phead){
+        counter++;
+        phead = phead->pNext;
+    }
+    return counter;
+}
+
+posilek* produktyPosilkuODanymNumerze(posilek* headPosilek,int numer){
+    int counter = 0;
+    while(headPosilek){
+        counter++;
+        if(counter==numer){
+            return headPosilek;
+        }
+        headPosilek = headPosilek->pNext;
+    }
+    return headPosilek;
+}
+
+
+void deleteMealFromList(posilek** head, int numer_posilku) {
+    int counter  = 1;
+    posilek* phead = *head;
+    posilek* prev = NULL;
+    if(numer_posilku == 1){
+        posilek* next = phead->pNext;
+        delete phead;
+        phead = NULL;
+        *head = next;
+        return;
+    }
+    while(counter!=numer_posilku){
+        counter++;
+        prev = phead;
+        phead = phead->pNext;
+    }
+    if(phead==NULL)
+        return;
+    posilek* next = phead->pNext;
+    prev->pNext = next;
+    delete phead;
+    phead = NULL;
+    return;
+}

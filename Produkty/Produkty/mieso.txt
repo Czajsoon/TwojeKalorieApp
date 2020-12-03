@@ -1,2 +1,18 @@
-Mieso Kurczak 12
-Mieso Wołowina 122
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kurczak_gotowany
+--Wartosc Energetyczna--
+5
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kurczak_pieczony
+--Wartosc Energetyczna--
+12
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+kurczak smażony
+--Wartosc Energetyczna--
+23

@@ -9,6 +9,14 @@
 
 using namespace std;
 
+bool pustaLiniaCopy(const std::string& Linia) {
+    bool rezultat = true;
+    for (char const& c : Linia) {
+        if (!isspace(c))
+            rezultat = false;
+    }
+    return rezultat;
+}
 
 void addingProductsToCategories(categoriesProduct** head) {
     categoriesProduct* phead = *head;
@@ -23,16 +31,55 @@ void addingProductsToCategories(categoriesProduct** head) {
         path.append(nazwa_kategorii);
         path.append(text);
         ifstream file(path);
+        enum Produkty{
+            NAZWA_KATEGORII,
+            NAZWA_PRODUKTU,
+            WARTOSC_ENERGETYCZNA
+        };
+        Produkty typ_lini;
+        int numer_lini = 0;
+        product* nowyProdukt = NULL;
         while (getline(file, line)) {
-            istringstream iss(line);
-            string nazwa_kategorii_produktu;
-            string nazwa_produktu;
-            double wartosc_energetyczna;
-            if (!(iss >> nazwa_kategorii_produktu >> nazwa_produktu >> wartosc_energetyczna)) { return; }
-            else {
-                nazwa_produktu[0] = toupper(nazwa_produktu[0]);
-                addProductToCategory(head, nazwa_kategorii, nazwa_produktu, wartosc_energetyczna);
+            if(pustaLiniaCopy(line)){
+                continue;
             }
+
+            if(line == "--Nazwa Kategorii--"){
+                typ_lini = NAZWA_KATEGORII;
+                numer_lini = 0;
+                nowyProdukt = new product;
+                nowyProdukt->pNext = NULL;
+            }
+
+            if(line == "--Nazwa Produktu--"){
+                typ_lini = NAZWA_PRODUKTU;
+                numer_lini = 0;
+            }
+
+            if(line == "--Wartosc Energetyczna--"){
+                typ_lini = WARTOSC_ENERGETYCZNA;
+                numer_lini = 0;
+            }
+
+            if(typ_lini == NAZWA_KATEGORII && nowyProdukt != NULL){
+                if(numer_lini==1)
+                    nowyProdukt->nazwa_kategorii = line;
+            }
+
+            if(typ_lini == NAZWA_PRODUKTU && numer_lini>0 && nowyProdukt != NULL){
+                line[0] = toupper(line[0]);
+                nowyProdukt->nazwa_produktu = line;
+            }
+
+            if(typ_lini == WARTOSC_ENERGETYCZNA && numer_lini>0 && nowyProdukt != NULL){
+                nowyProdukt->wartosc_energetyczna = stod(line);
+                addProductToCategory(head,nowyProdukt);
+                nowyProdukt->pNext = NULL;
+                delete nowyProdukt;
+                nowyProdukt = NULL;
+            }
+            numer_lini++;
+
         }
         phead = phead->pNext;
     }

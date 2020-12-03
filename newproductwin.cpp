@@ -50,14 +50,7 @@ void newproductwin::on_dodaj_clicked()
         ui->errorWE->setText("Nie wprowadzono danych!");
     }
     else{
-        if(is_space_in_string(ui->NP->text().toStdString()) && is_space_in_string(ui->WE->text().toStdString())){
-            ui->errorNP->setText("Wprowadzono niedozwolony znak - spacja");
-            ui->errorWE->setText("Wprowadzono niedozwolony znak - spacja");
-        }
-        else if(is_space_in_string(ui->NP->text().toStdString())){
-            ui->errorNP->setText("Wprowadzono niedozwolony znak - spacja");
-        }
-        else if(is_space_in_string(ui->WE->text().toStdString())){
+        if(is_space_in_string(ui->WE->text().toStdString())){
              ui->errorWE->setText("Wprowadzono niedozwolony znak - spacja");
         }
         else{
@@ -76,7 +69,15 @@ void newproductwin::on_dodaj_clicked()
                 ui->errorWE->setText("Proszę wprowadzić tylko liczby (np. 20.5)");
             }
             else{
-                addProductToCategory(&listaKategorii,ui->comboBox->currentText().toStdString(),ui->NP->text().toStdString(),ui->WE->text().toDouble());
+                product* nowyProdukt = new product;
+                nowyProdukt->nazwa_kategorii = ui->comboBox->currentText().toStdString();
+                nowyProdukt->nazwa_produktu = ui->NP->text().toStdString();
+                nowyProdukt->pNext = NULL;
+                nowyProdukt->wartosc_energetyczna = ui->WE->text().toDouble();
+                addProductToCategory(&listaKategorii,nowyProdukt);
+                //nowyProdukt->pNext = NULL;
+                //delete nowyProdukt;
+                nowyProdukt = NULL;
                 ui->succes->setText("Udało się dodać produkt!\n o nazwie: " + ui->NP->text() + "\n o wartości energetycznej: " + ui->WE->text() +" kcal");
                 save_CategoriesAndProducts(&listaKategorii);
                 ui->NP->setText("");

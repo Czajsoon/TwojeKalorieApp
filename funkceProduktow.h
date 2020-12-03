@@ -8,7 +8,7 @@
 void addCategory(categoriesProduct** head, std::string nazwa_kategorii);
 void delete_categories_product(categoriesProduct** head);
 void printCategories(categoriesProduct** head);
-void addProductToCategory(categoriesProduct** headCategory, std::string nazwa_kategorii, std::string nazwa_produktu, double wartosc_energetyczna);
+void addProductToCategory(categoriesProduct** headCategory, product* nowyProdukt);
 void clearMemoryProductsAndCategory(categoriesProduct** head);
 void wypiszKategorieAndProdukty(categoriesProduct* head);
 bool is_category_in_Categories(categoriesProduct* head,std::string nazwa_kategorii);

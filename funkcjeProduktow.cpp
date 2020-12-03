@@ -65,54 +65,54 @@ void printCategories(categoriesProduct** head) {
     }
 }
 
-void createListProducts(product** head, std::string nazwa_kategorii, std::string nazwa_produktu, double wartosc_energetyczna) {
+void createListProducts(product** head, product* nowyProdukt) {
     if (!*head) {
-        product* phead = new product;
-        phead->pNext = nullptr;
-        phead->nazwa_kategorii = nazwa_kategorii;
-        phead->nazwa_produktu = nazwa_produktu;
-        phead->wartosc_energetyczna = wartosc_energetyczna;
-        *head = phead;
+        product* produkcik = new product;
+        produkcik->nazwa_kategorii = nowyProdukt->nazwa_kategorii;
+        produkcik->nazwa_produktu = nowyProdukt->nazwa_produktu;
+        produkcik->wartosc_energetyczna = nowyProdukt->wartosc_energetyczna;
+        produkcik->pNext  = NULL;
+        *head = produkcik;
     }
 }
 
-void addToListProducts(product** head, std::string nazwa_kategorii, std::string nazwa_produktu, double wartosc_energetyczna) {
+void addToListProducts(product** head, product* nowyProdukt) {
     product* phead = *head;
-    product* newElement = new product;
-    newElement->nazwa_kategorii = nazwa_kategorii;
-    newElement->nazwa_produktu = nazwa_produktu;
-    newElement->pNext = nullptr;
-    newElement->wartosc_energetyczna = wartosc_energetyczna;
-    if (newElement->nazwa_produktu <= phead->nazwa_produktu) {
-        *head = newElement;
-        newElement->pNext = phead;
-    }
-    else {
-        while (phead->pNext != NULL) {
-            product* pheadnext = phead->pNext;
-            if (newElement->nazwa_produktu <= pheadnext->nazwa_produktu) {
-                phead->pNext = newElement;
-                newElement->pNext = pheadnext;
-                break;
+        product* newElement = new product;
+        newElement->nazwa_kategorii = nowyProdukt->nazwa_kategorii;
+        newElement->nazwa_produktu = nowyProdukt->nazwa_produktu;
+        newElement->pNext = nullptr;
+        newElement->wartosc_energetyczna = nowyProdukt->wartosc_energetyczna;
+        if (newElement->nazwa_produktu <= phead->nazwa_produktu) {
+            *head = newElement;
+            newElement->pNext = phead;
+        }
+        else {
+            while (phead->pNext != NULL) {
+                product* pheadnext = phead->pNext;
+                if (newElement->nazwa_produktu <= pheadnext->nazwa_produktu) {
+                    phead->pNext = newElement;
+                    newElement->pNext = pheadnext;
+                    break;
+                }
+                phead = phead->pNext;
             }
-            phead = phead->pNext;
+            if (newElement->nazwa_produktu >= phead->nazwa_produktu) {
+                phead->pNext = newElement;
+            }
         }
-        if (newElement->nazwa_produktu >= phead->nazwa_produktu) {
-            phead->pNext = newElement;
-        }
-    }
 }
 
-void addProductToCategory(categoriesProduct** headCategory, std::string nazwa_kategorii, std::string nazwa_produktu, double wartosc_energetyczna) {
+void addProductToCategory(categoriesProduct** headCategory, product* nowyProdukt) {
     categoriesProduct* pheadCat = *headCategory;
     while (pheadCat != NULL) {
-        if (pheadCat->nazwa_kategorii == nazwa_kategorii) {
+        if (pheadCat->nazwa_kategorii == nowyProdukt->nazwa_kategorii) {
             if (pheadCat->produkty) {
-                addToListProducts(&pheadCat->produkty, nazwa_kategorii, nazwa_produktu, wartosc_energetyczna);
+                addToListProducts(&pheadCat->produkty, nowyProdukt);
                 return;
             }
             else {
-                createListProducts(&pheadCat->produkty, nazwa_kategorii, nazwa_produktu, wartosc_energetyczna);
+                createListProducts(&pheadCat->produkty, nowyProdukt);
                 return;
             }
         }

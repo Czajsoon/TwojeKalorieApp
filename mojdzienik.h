@@ -2,6 +2,7 @@
 #define MOJDZIENIK_H
 
 #include <QDialog>
+#include "addingnewmeal.h"
 
 namespace Ui {
 class MojDzienik;
@@ -18,8 +19,19 @@ public:
 private slots:
     void on_szowProducts_clicked();
 
+    void on_WyswietDziennik_clicked();
+
+    void on_tabela_activated(const QModelIndex &index);
+
+    void on_usunPosilek_clicked();
+
+    void on_AddMeal_clicked();
+
+    void on_GoBack_clicked();
+
 private:
     Ui::MojDzienik *ui;
+    addingNewMeal* addingnewmealwin;
     enum koumnyPosilkow{
         NAZWA ,DATA,WE,WAGA
     };

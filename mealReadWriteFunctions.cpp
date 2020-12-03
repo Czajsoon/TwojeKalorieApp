@@ -191,11 +191,12 @@ void ustawProdukt(posilek** akktualnyPosilek, const std::string& liniaProduktu) 
 
     int licznik_spacji = 0;
     for (const char& c : liniaProduktu) {
-        if (isspace(c)) {
+        if (c=='`') {
             licznik_spacji++;
         }
         else if (licznik_spacji == 0) {
-            nazwaPro += c;
+            if(c!='"')
+                nazwaPro += c;
         }
         else if (licznik_spacji % 2 == 1) {
             WEstr += c;
@@ -227,7 +228,7 @@ void zapisz_liste_posilkow(posilek** lista_posilkow) {
         myfile << "--- Produkty ---" << endl;
         productMeal* pheadPro = phead->produkty;
         while (pheadPro) {
-            myfile << pheadPro->nazwa_produktu << " " << pheadPro->wartosc_energetyczna << " " << pheadPro->waga << endl;
+            myfile <<'"'<<pheadPro->nazwa_produktu << '"'<<"`" << pheadPro->wartosc_energetyczna << "`" << pheadPro->waga << endl;
             pheadPro = pheadPro->pNext;
         }
         myfile << "--- Wartosc Energetyczna Posilku ---" << endl;

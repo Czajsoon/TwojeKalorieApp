@@ -208,7 +208,6 @@ void addingNewMeal::on_saveDanie_clicked()
     }
     else{
         posilek* dzinnik = NULL;
-
         czytaj(&dzinnik);
         ui->produkty->setRowCount(0);
         if(ui->nazwaPosilku->text()==""){
@@ -221,36 +220,27 @@ void addingNewMeal::on_saveDanie_clicked()
             ui->succesDodPo->setText("Dodano posiłek do dziennika!");
             nowyPosilek->nazwa_posilku = data_help.toStdString();
             nowyPosilek->data = data.toStdString();
-            //posilek* nowyposilekKopia = nowyPosilek;
             addMeal(&dzinnik,nowyPosilek);
             zapisz_liste_posilkow(&dzinnik);
             usun_produkty_z_posilku(&nowyPosilek);
             ui->waga->setText("");
             ui->nazwaPosilku->setText("");
-
-            //osobna funkcja
-//            delete nowyPosilek;
-//            nowyPosilek=NULL;//osobna funkcja
             ui->wynikWE->setText("Wartość energetyczna posiłku\n 0 kcal");
+            ui->WAaPosilkuPods->setText("Waga posiłku\n 0g");
         }
         else{
             QString time_format = "yyyy-MM-dd";
             QDateTime a = QDateTime::currentDateTime();
             QString data = a.toString(time_format);
             ui->succesDodPo->setText("Dodano posiłek do dziennika!");
-            posilek* dzinnik = NULL;
             nowyPosilek->nazwa_posilku = ui->nazwaPosilku->text().toStdString();
             nowyPosilek->data = data.toStdString();
-//            czytaj(&dzinnik);
             posilek* nowyposilekKopia = nowyPosilek;
             addMeal(&dzinnik,nowyposilekKopia);
             zapisz_liste_posilkow(&dzinnik);
             usun_produkty_z_posilku(&nowyPosilek);
             ui->waga->setText("");
             ui->nazwaPosilku->setText("");
-
-//            delete nowyPosilek;
-//            nowyPosilek=NULL;//osobna funkcja
             ui->wynikWE->setText("Wartość energetyczna posiłku\n 0 kcal");
             ui->WAaPosilkuPods->setText("Waga posiłku\n 0g");
         }
@@ -282,6 +272,7 @@ void addingNewMeal::on_DEleteListProducts_clicked()
 
 void addingNewMeal::on_BackListProducts_clicked()
 {
+    ui->WAaPosilkuPods->setText("Waga posiłku\n 0g");
     ui->ProductsListError->setText("");
     if(nowyPosilek->produkty==NULL){
         ui->ProductsListError->setText("Nie ma produktów do cofniecia z listy!");

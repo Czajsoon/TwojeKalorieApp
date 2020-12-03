@@ -14,6 +14,7 @@ void saveProducts(categoriesProduct** head) {
     string path = QDir::currentPath().toStdString();
     string text = ".txt";
     string category_name;
+
     while (phead) {
         string folder = "/Produkty/Produkty/";
         path.append(folder);
@@ -21,13 +22,19 @@ void saveProducts(categoriesProduct** head) {
         product* produkty = phead->produkty;
         path.append(category_name);
         path.append(text);
-        ofstream fileProducts(path);
-        if (fileProducts.is_open()) {
-            while (produkty) {
-                fileProducts << produkty->nazwa_kategorii <<" "<< produkty->nazwa_produktu << " " << produkty->wartosc_energetyczna << endl;
-                produkty = produkty->pNext;
-            }
+        ofstream fileProducts;
+        fileProducts.open(path);
+        while (produkty) {
+            fileProducts<<"--Nazwa Kategorii--"<<endl;
+            fileProducts<<produkty->nazwa_kategorii<<endl;
+            fileProducts<<"--Nazwa Produktu--"<<endl;
+            fileProducts<<produkty->nazwa_produktu<<endl;
+            fileProducts<<"--Wartosc Energetyczna--"<<endl;
+            fileProducts<<produkty->wartosc_energetyczna;
+            fileProducts<<endl;
+            produkty = produkty->pNext;
         }
+        fileProducts.close();
         phead = phead->pNext;
     }
 }
