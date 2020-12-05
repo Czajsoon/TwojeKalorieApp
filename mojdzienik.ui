@@ -86,6 +86,11 @@ QPushButton#AddMeal:hover{
 	background-color: rgb(174, 253, 145);
 }
 
+QPushButton#print{
+	background-color: rgb(255, 255, 127);
+font-size:12px;
+}
+
 QLabel#DMerror{
 	color: rgb(255, 55, 15);
 	font-size:10px;
@@ -285,6 +290,29 @@ QLabel#LPError{
    </property>
    <property name="text">
     <string>Wróć</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="print">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>10</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Drukuj Liste Produktów</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="edytor">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>550</y>
+     <width>104</width>
+     <height>70</height>
+    </rect>
    </property>
   </widget>
  </widget>

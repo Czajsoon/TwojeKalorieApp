@@ -9,11 +9,15 @@
 #include "mealStructure.h"
 #include "globals.h"
 
+#include <QPrinter>
+#include <QPrintDialog>
+
 MojDzienik::MojDzienik(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MojDzienik)
 {
     ui->setupUi(this);
+    ui->edytor->setVisible(false);
     ui->DMerror->setText("");
     ui->dziennikInfo->setText("Dziennik użytkownika " + login_user_name);
     QStringList posilkiTabela;
@@ -23,6 +27,7 @@ MojDzienik::MojDzienik(QWidget *parent) :
     ui->tabela->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->tabela->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->AddMeal->setVisible(false);
+    ui->print->setVisible(false);
     posilek* listaPosilkow = NULL;
     czytaj(&listaPosilkow);
     ui->LPError->setText("");
@@ -75,6 +80,12 @@ void MojDzienik::on_szowProducts_clicked()
     posilek* listaPosilkow = NULL;
     czytaj(&listaPosilkow);
     if(listaPosilkow!=NULL){
+        ui->print->setVisible(true);
+        ui->numerDaniaInfo->setVisible(false);
+        ui->numerPosilku->setVisible(false);
+        ui->usunPosilek->setVisible(false);
+        ui->szowProducts->setVisible(false);
+
         QStringList produktyPosilkuTabela;
         produktyPosilkuTabela <<"Nazwa Produktu"<<"Waga produktu(g)"<<"Wartość energetyczna produktu(kcal)";
         ui->tabela->setColumnCount(3);
@@ -99,9 +110,15 @@ void MojDzienik::on_szowProducts_clicked()
 
 void MojDzienik::on_WyswietDziennik_clicked()
 {
+    ui->print->setVisible(false);
     posilek* listaPosilkow = NULL;
     czytaj(&listaPosilkow);
     if(listaPosilkow==NULL){
+        ui->numerDaniaInfo->setVisible(true);
+        ui->numerPosilku->setVisible(true);
+        ui->usunPosilek->setVisible(true);
+        ui->szowProducts->setVisible(true);
+
         ui->numerPosilku->setVisible(false);
         ui->usunPosilek->setVisible(false);
         ui->DMerror->setVisible(false);
@@ -233,4 +250,26 @@ void MojDzienik::on_GoBack_clicked()
     this->close();
     QWidget *parent = this->parentWidget();
     parent->show();
+}
+
+void MojDzienik::on_print_clicked()
+{
+    QPrinter printer;
+    QPrintDialog dialog(&printer,this);
+    if(dialog.exec() == QDialog::Rejected) return;
+    posilek* listaposilkow = NULL;
+    czytaj(&listaposilkow);
+    posilek* akutualnyPosilek = produktyPosilkuODanymNumerze(listaposilkow,ui->numerPosilku->value());
+    productMeal* listaproduktow = akutualnyPosilek->produkty;
+    std::string lista = "Lista Produktów\n";
+    int numer = 1;
+    while(listaproduktow){
+        string number = to_string(numer);
+        string waga = to_string(listaproduktow->waga);
+        lista.append(number + ". " + listaproduktow->nazwa_produktu + "\tWaga produktu: " + waga + "g\n");
+        listaproduktow =listaproduktow->pNext;
+        numer++;
+    }
+    ui->edytor->setText(QString::fromStdString(lista));
+    ui->edytor->print(&printer);
 }

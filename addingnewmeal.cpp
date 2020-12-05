@@ -48,6 +48,12 @@ addingNewMeal::addingNewMeal(QWidget *parent) :
 addingNewMeal::~addingNewMeal()
 {
     delete ui;
+    if(nowyPosilek!=NULL){
+        nowyPosilek->pNext = NULL;
+        delete nowyPosilek;
+        nowyPosilek = NULL;
+    }
+
 }
 
 void addingNewMeal::on_dodaj_clicked()
@@ -138,8 +144,6 @@ void addingNewMeal::on_dodaj_clicked()
             }
             listaProduktow = nowyPosilek->produkty;
         }
-
-
         ui->produkty->setRowCount(0);
         nowyPosilek->waga = 0;
         nowyPosilek->wartosc_energetyczna = 0;
@@ -152,6 +156,7 @@ void addingNewMeal::on_dodaj_clicked()
             ui->produkty->setItem(cos,WAGA,new QTableWidgetItem(QString::number(listaProduktow->waga)));
             listaProduktow =listaProduktow->pNext;
         }
+
         QString WEwynikText = "Wartość energetyczna posiłku\n";
         QString WeneWynik = QString::number(nowyPosilek->wartosc_energetyczna);
         WEwynikText.append(WeneWynik);

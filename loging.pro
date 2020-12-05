@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,6 +26,7 @@ SOURCES += \
     newproductwin.cpp \
     readingCategoriesAndProducts.cpp \
     reading_users_functions.cpp \
+    sharedmeals.cpp \
     users_functions.cpp \
     writingFunctionsCategorieAndProducts.cpp \
     writing_functions.cpp
@@ -49,6 +50,7 @@ HEADERS += \
     produktyStruktury.h \
     readingCategoriesAndProducts.h \
     reading_users_functions.h \
+    sharedmeals.h \
     struct_list_users.h \
     users_functions.h \
     writingFunctionsCategoriesAndProducts.h \
@@ -63,7 +65,8 @@ FORMS += \
     login.ui \
     mojdzienik.ui \
     newcategorywin.ui \
-    newproductwin.ui
+    newproductwin.ui \
+    sharedmeals.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

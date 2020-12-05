@@ -22,6 +22,7 @@ newproductwin::newproductwin(QWidget *parent) :
         ui->comboBox->addItem(qnazwaCat);
         phead = phead->pNext;
     }
+    clearMemoryProductsAndCategory(&listaKategorii);
 }
 
 newproductwin::~newproductwin()
@@ -76,10 +77,12 @@ void newproductwin::on_dodaj_clicked()
                 nowyProdukt->wartosc_energetyczna = ui->WE->text().toDouble();
                 addProductToCategory(&listaKategorii,nowyProdukt);
                 //nowyProdukt->pNext = NULL;
-                //delete nowyProdukt;
-                nowyProdukt = NULL;
+
                 ui->succes->setText("Udało się dodać produkt!\n o nazwie: " + ui->NP->text() + "\n o wartości energetycznej: " + ui->WE->text() +" kcal");
                 save_CategoriesAndProducts(&listaKategorii);
+                delete nowyProdukt;
+                nowyProdukt = NULL;
+                clearMemoryProductsAndCategory(&listaKategorii);
                 ui->NP->setText("");
                 ui->WE->setText("");
             }

@@ -29,6 +29,8 @@ private slots:
 
     void on_GoBack_clicked();
 
+    void on_print_clicked();
+
 private:
     Ui::MojDzienik *ui;
     addingNewMeal* addingnewmealwin;

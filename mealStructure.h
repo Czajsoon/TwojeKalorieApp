@@ -15,7 +15,7 @@ struct productMeal {
     productMeal* pNext;
 };
 
-struct posilek {
+struct posilek{
     string nazwa_posilku;
     string data;
     productMeal* produkty;

@@ -1,12 +1,11 @@
 --- Nazwa Posilku ---
-gh
+costam
 --- Data ---
-2020-11-29
+2020-12-05
 --- Produkty ---
-Kurczak 12 35
-Wołowina 122 23
+"Kurczak smażony"`23`57
 --- Wartosc Energetyczna Posilku ---
-3226
+1311
 --- Waga posilku ---
-58
+57
 

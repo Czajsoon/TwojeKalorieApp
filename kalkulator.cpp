@@ -173,3 +173,10 @@ void Kalkulator::on_MojDziennik_clicked()
     mojDziennikWin = new MojDzienik(this);
     mojDziennikWin->show();
 }
+
+void Kalkulator::on_Ideas_clicked()
+{
+    this->hide();
+    shardeMealsWin = new SharedMeals(this);
+    shardeMealsWin->show();
+}

@@ -39,6 +39,7 @@ void czytaj(posilek** PosilekHead) {
             nowyposilek = new posilek;
             nowyposilek->pNext = nullptr;
             nowyposilek->produkty = nullptr;
+            //nowyposilek->opis = "";
         }
 
         if (linia == "--- Data ---") {
@@ -123,6 +124,7 @@ void czytajShare(posilek** PosilekHead) {
             nowyposilek = new posilek;
             nowyposilek->pNext = nullptr;
             nowyposilek->produkty = nullptr;
+            //nowyposilek->opis = "";
         }
 
         if (linia == "--- Data ---") {
@@ -259,7 +261,7 @@ void zapisz_liste_posilkow_shared(posilek** lista_posilkow) {
         myfile << "--- Produkty ---" << endl;
         productMeal* pheadPro = phead->produkty;
         while (pheadPro) {
-            myfile << pheadPro->nazwa_produktu << " " << pheadPro->wartosc_energetyczna << " " << pheadPro->waga << endl;
+            myfile <<'"'<<pheadPro->nazwa_produktu << '"'<<"`" << pheadPro->wartosc_energetyczna << "`" << pheadPro->waga << endl;
             pheadPro = pheadPro->pNext;
         }
         myfile << "--- Wartosc Energetyczna Posilku ---" << endl;

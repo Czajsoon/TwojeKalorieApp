@@ -25,8 +25,6 @@ void newCategoryWin::on_anuluj_clicked()
     this->close();
 }
 
-
-
 void newCategoryWin::on_dodaj_clicked()
 {
     ui->bladKategorii->setText("");
@@ -41,6 +39,7 @@ void newCategoryWin::on_dodaj_clicked()
         else{
             categoriesProduct* listaKategorii = NULL;
             listaKategorii = addingCategoriesAndProduct();
+
             QString nCat =  ui->categoryname->text();
             nCat[0] = nCat[0].toUpper();
             if(is_category_in_Categories(listaKategorii,nCat.toStdString())){

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SharedMeals</class>
+ <widget class="QDialog" name="SharedMeals">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>946</width>
+    <height>509</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Wspólne Przepisy</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background-color: rgb(51, 51, 51);
+	font-size:20px;
+	color: rgb(220, 220, 220);
+}
+
+QPushButton{
+font-size:17px;
+	color: rgb(51, 51, 51);
+	border-radius:5px;
+}
+
+QPushButton#Back{
+	background-color: rgb(255, 51, 82);
+}
+
+QPushButton#Back:hover{
+	background-color: rgb(242, 93, 128);
+}
+
+QPushButton#PrintProducts{
+	background-color: rgb(255, 255, 127);
+}
+
+QPushButton#PrintProducts:hover{
+	background-color: rgb(250, 255, 161);
+}
+
+
+QPushButton#ShowProducts{
+	background-color: rgb(169, 253, 106);
+	padding:10px;
+margin-left:25px;
+}
+
+QPushButton#ShowProducts:hover{
+	background-color: rgb(187, 253, 151);
+}
+
+QLabel#numberMealLabel{
+margin-right:25px;
+}
+
+QPushButton#pushButton{
+	background-color: rgb(7, 255, 15);
+}
+
+QPushButton#pushButton:hover{
+	background-color: rgb(48, 255, 89);
+}</string>
+  </property>
+  <widget class="QTableWidget" name="tabela">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>101</y>
+     <width>931</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QHeaderView::section {
+    background-color: #646464;
+    padding: 14px;
+    border: 1px solid #fffff8;
+    font-size: 14pt;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>10</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Posiłki udostępnione przez innych</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PrintProducts">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>40</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Drukuj produkty </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Back">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>380</y>
+     <width>80</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Wróć</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nazwaPosilku">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>301</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nazwa Posiłku</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>50</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pokaż przepisy</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="printer">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>490</y>
+     <width>104</width>
+     <height>85</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bkaPrzepisow">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>190</y>
+     <width>471</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Brak przepisów do przeglądania! Przepraszamy! :(</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>390</y>
+     <width>382</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="numberMealLabel">
+      <property name="text">
+       <string>Numer Posiłku</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSpinBox" name="numberMealSpin"/>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="ShowProducts">
+      <property name="text">
+       <string>Pokaż produkty </string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
