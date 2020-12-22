@@ -1,0 +1,11 @@
+--- Nazwa Posilku ---
+2020-12-12  22:03:31
+--- Data ---
+2020-12-12
+--- Produkty ---
+"Kurczak smażony"`23`434
+--- Wartosc Energetyczna Posilku ---
+9982
+--- Waga posilku ---
+434
+

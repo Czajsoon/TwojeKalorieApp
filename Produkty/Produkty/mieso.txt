@@ -1,42 +1,12 @@
 --Nazwa Kategorii--
 Mieso
 --Nazwa Produktu--
-Kurczak smażony
---Wartosc Energetyczna--
-23
---Nazwa Kategorii--
-Mieso
---Nazwa Produktu--
-Kurczak_gotowany
---Wartosc Energetyczna--
-5
---Nazwa Kategorii--
-Mieso
---Nazwa Produktu--
-Kurczak_pieczony
---Wartosc Energetyczna--
-12
---Nazwa Kategorii--
-Mieso
---Nazwa Produktu--
-Wolowina 2
---Wartosc Energetyczna--
-14
---Nazwa Kategorii--
-Mieso
---Nazwa Produktu--
-Wolowina1
---Wartosc Energetyczna--
-13
---Nazwa Kategorii--
-Mieso
---Nazwa Produktu--
 Wołowina
 --Wartosc Energetyczna--
 12
 --Nazwa Kategorii--
 Mieso
 --Nazwa Produktu--
-wolowina 3
+kurczak
 --Wartosc Energetyczna--
-15
+14
