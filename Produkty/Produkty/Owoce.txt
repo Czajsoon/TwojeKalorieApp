@@ -1,0 +1,78 @@
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Agrest
+--Wartosc Energetyczna--
+0.41
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Ananas
+--Wartosc Energetyczna--
+0.54
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Ananas w syropie
+--Wartosc Energetyczna--
+0.84
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Arbuz
+--Wartosc Energetyczna--
+0.36
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Banan
+--Wartosc Energetyczna--
+0.95
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Brzoskwinia
+--Wartosc Energetyczna--
+0.46
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Brzoskwinia w syropie
+--Wartosc Energetyczna--
+0.73
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Cytryna
+--Wartosc Energetyczna--
+0.36
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Czereśnie
+--Wartosc Energetyczna--
+0.61
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Gruszka
+--Wartosc Energetyczna--
+0.54
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Jagody
+--Wartosc Energetyczna--
+0.45
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Kiwi
+--Wartosc Energetyczna--
+0.56
+--Nazwa Kategorii--
+Owoce
+--Nazwa Produktu--
+Morele
+--Wartosc Energetyczna--
+0.47

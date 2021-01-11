@@ -2,6 +2,7 @@
 #define KALKULATOR_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include "newcategorywin.h"
 #include "newproductwin.h"
 #include "deletecategorywin.h"
@@ -44,6 +45,8 @@ private slots:
 
     void on_Ideas_clicked();
 
+    void on_infoButton_clicked();
+
 private:
     Ui::Kalkulator *ui;
     newCategoryWin* addingcategorywin;
@@ -53,6 +56,7 @@ private:
     addingNewMeal* addingnewmealwin;
     MojDzienik* mojDziennikWin;
     SharedMeals* shardeMealsWin;
+    QMessageBox msgBox;
 };
 
 #endif // KALKULATOR_H

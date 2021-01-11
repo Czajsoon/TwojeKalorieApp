@@ -11,11 +11,10 @@ using namespace std;
 
 void saveProducts(categoriesProduct** head) {
     categoriesProduct* phead = *head;
-    string path = QDir::currentPath().toStdString();
     string text = ".txt";
     string category_name;
-
     while (phead) {
+        string path = QDir::currentPath().toStdString();
         string folder = "/Produkty/Produkty/";
         path.append(folder);
         category_name = phead->nazwa_kategorii;

@@ -1,0 +1,54 @@
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Morszczuk świeży
+--Wartosc Energetyczna--
+0.89
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Pstrąg tęczowy świeży
+--Wartosc Energetyczna--
+1.6
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Pstrąg wędzony
+--Wartosc Energetyczna--
+1.17
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Sandacz świeży
+--Wartosc Energetyczna--
+0.84
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Łosoś smażony
+--Wartosc Energetyczna--
+3.8
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Łosoś wędzony
+--Wartosc Energetyczna--
+1.62
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Łosoś świeży
+--Wartosc Energetyczna--
+2.01
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Śledź solony
+--Wartosc Energetyczna--
+2.17
+--Nazwa Kategorii--
+Ryby
+--Nazwa Produktu--
+Śledź w oleju
+--Wartosc Energetyczna--
+3.01

@@ -9,7 +9,9 @@ Kalkulator::Kalkulator(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Kalkulator)
 {
+
     ui->setupUi(this);
+    ui->infoButton->setVisible(false);
     ui->WynikBMI->setText("Kliknij oblicz");
     ui->ErrorBMI->setText("");
     ui->ErrorWaga->setText("");
@@ -65,47 +67,64 @@ void Kalkulator::on_ObliczBMI_clicked()
                                     if(BMI>35){
                                         if(BMI>=40){
                                             ui->ErrorBMI->setText("Otyłość stopnia III!!!");
+                                            info = "Otyłość III stopnia nazwya się otyłością olbrzymia i mieści się w granicach powyżej 40 BMI. Zalecana jest konsultacja z lekarzem.";
                                             ui->ErrorBMI->setStyleSheet("color: rgb(255,0,0);");
+                                            ui->infoButton->setVisible(true);
                                         }
                                         else{
                                             ui->ErrorBMI->setText("Otyłość stopnia II!!");
+                                            info = "Otyłość II stopnia nazwya się otyłością olbrzymia i mieści się w granicach od 35 do 39.9. Zalecana jest konsultacja z lekarzem.";
                                             ui->ErrorBMI->setStyleSheet("color: rgb(250,128,114);");
+                                            ui->infoButton->setVisible(true);
                                         }
                                     }
                                     else{
                                         ui->ErrorBMI->setText("Otyłość stopnia I!");
+                                        info = "Otyłość I stopnia nazwya się otyłością olbrzymia i mieści się w granicach od 30 do 34.9 BMI. Zalecana jest konsultacja z lekarzem. ";
                                         ui->ErrorBMI->setStyleSheet("color: rgb(255,165,0);");
+                                        ui->infoButton->setVisible(true);
                                     }
                                 }
                                 else{
                                     ui->ErrorBMI->setText("Nadwaga!");
+                                    info = "Nagromadzenie tkanki tłuszczowej w organizmie przekraczające optymalne zalecenia zdrowotne. Zalecana jest konsultacja z lekarzem.";
                                     ui->ErrorBMI->setStyleSheet("color: rgb(255,255,0);");
+                                    ui->infoButton->setVisible(true);
                                 }
                             }
                             else{
                                 ui->ErrorBMI->setText("Prawidłowa Waga");
+                                info = "Prawidłowa waga dla podanego wzrostu.";
                                 ui->ErrorBMI->setStyleSheet("color: rgb(0,255,0);");
+                                ui->infoButton->setVisible(true);
                             }
                         }
                         else{
                             ui->ErrorBMI->setText("Niedowaga!");
+                            info = "Niedobór masy ciała w stosunku do jego wysokości. Zalecana jest konsultacja z lekarzem";
                             ui->ErrorBMI->setStyleSheet("color: rgb(0,0,255);");
+                            ui->infoButton->setVisible(true);
                         }
                     }
                     else{
                        ui->ErrorBMI->setText("Stopień Wychudzenia!");
+                       info = "Niedobór masy ciała w stosunku do jego wysokości. Zalecana jest konsultacja z lekarzem";
                        ui->ErrorBMI->setStyleSheet("color: rgb(0,191,255);");
+                       ui->infoButton->setVisible(true);
                     }
                 }
                 else{
                    ui->ErrorBMI->setText("Stopień Wygłodzenia!!!");
+                   info = "Niedobór masy ciała w stosunku do jego wysokości. Zalecana jest konsultacja z lekarzem";
                    ui->ErrorBMI->setStyleSheet("color: rgb(127,255,212);");
+                   ui->infoButton->setVisible(true);
                 }
             }
             else{
                 ui->wzrost->setStyleSheet("background-color: rgb(255, 86, 8);");
                 ui->ErrorWzrost->setText("Niepoprawne dane");
                 ui->WynikBMI->setText("Błąd");
+                ui->infoButton->setVisible(false);
             }
         }
         else if(!wagaNumbers && !wzrostNumbers){
@@ -114,12 +133,14 @@ void Kalkulator::on_ObliczBMI_clicked()
             ui->WynikBMI->setText("Błąd");
             ui->wzrost->setStyleSheet("background-color: rgb(255, 86, 8);");
             ui->waga->setStyleSheet("background-color: rgb(255, 86, 8);");
+            ui->infoButton->setVisible(false);
         }
         else{
             ui->wzrost->setStyleSheet("background-color: rgb(220, 220, 220);");
             ui->waga->setStyleSheet("background-color: rgb(255, 86, 8);");
             ui->ErrorWaga->setText("Niepoprawne dane");
             ui->WynikBMI->setText("Błąd");
+            ui->infoButton->setVisible(false);
         }
     }
 }
@@ -179,4 +200,10 @@ void Kalkulator::on_Ideas_clicked()
     this->hide();
     shardeMealsWin = new SharedMeals(this);
     shardeMealsWin->show();
+}
+
+void Kalkulator::on_infoButton_clicked()
+{
+    QMessageBox::information(this,"BMI info",info);
+
 }

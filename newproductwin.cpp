@@ -76,7 +76,6 @@ void newproductwin::on_dodaj_clicked()
                 nowyProdukt->pNext = NULL;
                 nowyProdukt->wartosc_energetyczna = ui->WE->text().toDouble();
                 addProductToCategory(&listaKategorii,nowyProdukt);
-                //nowyProdukt->pNext = NULL;
 
                 ui->succes->setText("Udało się dodać produkt!\n o nazwie: " + ui->NP->text() + "\n o wartości energetycznej: " + ui->WE->text() +" kcal");
                 save_CategoriesAndProducts(&listaKategorii);

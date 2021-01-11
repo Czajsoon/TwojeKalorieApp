@@ -1,0 +1,36 @@
+--Nazwa Kategorii--
+Pieczywo
+--Nazwa Produktu--
+Bułka owsiana
+--Wartosc Energetyczna--
+3.04
+--Nazwa Kategorii--
+Pieczywo
+--Nazwa Produktu--
+Bułka pszenna zwykła
+--Wartosc Energetyczna--
+2.73
+--Nazwa Kategorii--
+Pieczywo
+--Nazwa Produktu--
+Bułka tarta
+--Wartosc Energetyczna--
+3.47
+--Nazwa Kategorii--
+Pieczywo
+--Nazwa Produktu--
+Chleb pszenny
+--Wartosc Energetyczna--
+2.57
+--Nazwa Kategorii--
+Pieczywo
+--Nazwa Produktu--
+Chleb zwykły
+--Wartosc Energetyczna--
+2.48
+--Nazwa Kategorii--
+Pieczywo
+--Nazwa Produktu--
+Chleb żytni razowy
+--Wartosc Energetyczna--
+2.13

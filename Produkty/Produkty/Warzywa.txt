@@ -1,0 +1,78 @@
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Bakłażan
+--Wartosc Energetyczna--
+0.21
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Brokuły
+--Wartosc Energetyczna--
+0.27
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Bób
+--Wartosc Energetyczna--
+0.66
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Cebula
+--Wartosc Energetyczna--
+0.3
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Cukinia
+--Wartosc Energetyczna--
+0.15
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Dynia
+--Wartosc Energetyczna--
+0.28
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Fasola szparagowa
+--Wartosc Energetyczna--
+0.27
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Marchewka
+--Wartosc Energetyczna--
+0.27
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Ogórek
+--Wartosc Energetyczna--
+0.13
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Pomidor
+--Wartosc Energetyczna--
+0.15
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Sałata
+--Wartosc Energetyczna--
+0.14
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Szparagi
+--Wartosc Energetyczna--
+0.18
+--Nazwa Kategorii--
+Warzywa
+--Nazwa Produktu--
+Ziemniaki
+--Wartosc Energetyczna--
+0.77

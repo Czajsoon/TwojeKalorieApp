@@ -1,12 +1,282 @@
 --Nazwa Kategorii--
 Mieso
 --Nazwa Produktu--
-Wołowina
+Baleron
 --Wartosc Energetyczna--
-12
+2.44
 --Nazwa Kategorii--
 Mieso
 --Nazwa Produktu--
-kurczak
+Baleron
 --Wartosc Energetyczna--
-14
+2.44
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Baleron
+--Wartosc Energetyczna--
+2.44
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Boczek wędzony
+--Wartosc Energetyczna--
+4.77
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Boczek wędzony
+--Wartosc Energetyczna--
+4.77
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Boczek wędzony
+--Wartosc Energetyczna--
+4.77
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Cielęcina udziec
+--Wartosc Energetyczna--
+1.08
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Cielęcina udziec
+--Wartosc Energetyczna--
+1.08
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Cielęcina udziec
+--Wartosc Energetyczna--
+1.08
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Cielęcina łopatka
+--Wartosc Energetyczna--
+1.06
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Cielęcina łopatka
+--Wartosc Energetyczna--
+1.06
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Cielęcina łopatka
+--Wartosc Energetyczna--
+1.06
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kabanos
+--Wartosc Energetyczna--
+3.26
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kabanos
+--Wartosc Energetyczna--
+3.26
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kabanos
+--Wartosc Energetyczna--
+3.26
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kiełbasa sucha krakowska
+--Wartosc Energetyczna--
+3.23
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kiełbasa sucha krakowska
+--Wartosc Energetyczna--
+3.23
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kiełbasa sucha krakowska
+--Wartosc Energetyczna--
+3.23
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kiełbasa śląska
+--Wartosc Energetyczna--
+2.1
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kiełbasa śląska
+--Wartosc Energetyczna--
+2.1
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Kiełbasa śląska
+--Wartosc Energetyczna--
+2.1
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Polędwica z piersi kurczaka
+--Wartosc Energetyczna--
+0.93
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Polędwica z piersi kurczaka
+--Wartosc Energetyczna--
+0.93
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Polędwica z piersi kurczaka
+--Wartosc Energetyczna--
+0.93
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Schab pieczony
+--Wartosc Energetyczna--
+2.91
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Schab pieczony
+--Wartosc Energetyczna--
+2.91
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Schab pieczony
+--Wartosc Energetyczna--
+2.91
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Sdf
+--Wartosc Energetyczna--
+32
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Sdf
+--Wartosc Energetyczna--
+32
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Sdf
+--Wartosc Energetyczna--
+32
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Udko kurczaka bez skóry
+--Wartosc Energetyczna--
+1.25
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Udko kurczaka bez skóry
+--Wartosc Energetyczna--
+1.25
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Udko kurczaka bez skóry
+--Wartosc Energetyczna--
+1.25
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Udziec indyka bez skóry
+--Wartosc Energetyczna--
+1.31
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Udziec indyka bez skóry
+--Wartosc Energetyczna--
+1.31
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Udziec indyka bez skóry
+--Wartosc Energetyczna--
+1.31
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Werrew
+--Wartosc Energetyczna--
+23
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Werrew
+--Wartosc Energetyczna--
+23
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Werrew
+--Wartosc Energetyczna--
+23
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Wieprzowina karkówka
+--Wartosc Energetyczna--
+2.67
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Wieprzowina karkówka
+--Wartosc Energetyczna--
+2.67
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Wieprzowina karkówka
+--Wartosc Energetyczna--
+2.67
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Wieprzowina łopatka
+--Wartosc Energetyczna--
+2.57
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Wieprzowina łopatka
+--Wartosc Energetyczna--
+2.57
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Wieprzowina łopatka
+--Wartosc Energetyczna--
+2.57
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Łosoś smażony
+--Wartosc Energetyczna--
+3.8
+--Nazwa Kategorii--
+Mieso
+--Nazwa Produktu--
+Łosoś świeży
+--Wartosc Energetyczna--
+2.01

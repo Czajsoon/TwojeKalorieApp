@@ -1,0 +1,30 @@
+--Nazwa Kategorii--
+Nabial
+--Nazwa Produktu--
+Ser Brie pełnotłusty
+--Wartosc Energetyczna--
+3.29
+--Nazwa Kategorii--
+Nabial
+--Nazwa Produktu--
+Ser Camembert pełnotłusty
+--Wartosc Energetyczna--
+2.91
+--Nazwa Kategorii--
+Nabial
+--Nazwa Produktu--
+Ser Parmezan
+--Wartosc Energetyczna--
+4.52
+--Nazwa Kategorii--
+Nabial
+--Nazwa Produktu--
+Ser mozzarella
+--Wartosc Energetyczna--
+2.54
+--Nazwa Kategorii--
+Nabial
+--Nazwa Produktu--
+Serek homogenizowany
+--Wartosc Energetyczna--
+1.62
